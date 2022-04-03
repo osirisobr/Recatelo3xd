@@ -4,16 +4,16 @@
     <group>
 
         <item
-            android:id="@+id/nav_item_one"
+            android:id="@+id/nav_item_novedades"
             android:icon="@drawable/abc_vector_test"
             android:title="Novedades" />
 
         <item
-            android:id="@+id/nav_item_two"
+            android:id="@+id/nav_item_comollegar"
             android:icon="@drawable/abc_vector_test"
             android:title="como llegar" />
         <item
-            android:id="@+id/nav_item_three"
+            android:id="@+id/nav_item_contacto"
             android:icon="@drawable/abc_vector_test"
             android:title="Contacto" />
 

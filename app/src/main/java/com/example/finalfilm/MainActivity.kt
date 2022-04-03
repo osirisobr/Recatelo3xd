@@ -10,6 +10,10 @@ import android.widget.Toolbar
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.core.view.GravityCompat
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.fragment.app.FragmentTransaction
+import com.example.finalfilm.Fragments.ComoLlegarFragment
+import com.example.finalfilm.Fragments.ContactoFragment
+import com.example.finalfilm.Fragments.NovedadesFragment
 import com.google.android.material.navigation.NavigationView
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener  {
@@ -36,15 +40,32 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         val navigationView: NavigationView = findViewById(R.id.nav_view)
         navigationView.setNavigationItemSelectedListener(this)
+        
+
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
 
         when(item.itemId){
-            R.id.nav_item_one ->Toast.makeText(this,"ITEM ONE", Toast.LENGTH_SHORT).show()
-            R.id.nav_item_two ->Toast.makeText(this,"ITEM TWO", Toast.LENGTH_SHORT).show()
-            R.id.nav_item_three ->Toast.makeText(this,"ITEM THREE", Toast.LENGTH_SHORT).show()
-                   }
+            R.id.nav_item_novedades -> {Toast.makeText(this,"Contacto", Toast.LENGTH_SHORT).show()
+                val ft: FragmentTransaction = supportFragmentManager.beginTransaction()
+                ft.replace(R.id.fragmentContainerView, NovedadesFragment())
+                ft.commit()
+
+            }
+            R.id.nav_item_contacto ->{Toast.makeText(this,"Contacto", Toast.LENGTH_SHORT).show()
+                val ft: FragmentTransaction = supportFragmentManager.beginTransaction()
+                ft.replace(R.id.fragmentContainerView, ContactoFragment())
+                ft.commit()
+
+            }
+            R.id.nav_item_comollegar -> {
+                Toast.makeText(this, "Como llegar", Toast.LENGTH_SHORT).show()
+                val ft: FragmentTransaction = supportFragmentManager.beginTransaction()
+                ft.replace(R.id.fragmentContainerView, ComoLlegarFragment())
+                ft.commit()
+
+            }}
        drawer.closeDrawer(GravityCompat.START)
         return true
 

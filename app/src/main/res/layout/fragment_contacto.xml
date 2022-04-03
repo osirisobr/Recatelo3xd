@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.ContactoFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text=""
+        tools:layout_editor_absoluteX="-86dp"
+        tools:layout_editor_absoluteY="-64dp" />
+
+    <TextView
+        android:id="@+id/tvNombreContacto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="76dp"
+        android:layout_marginTop="64dp"
+        android:text="@string/contacta_con_nosotros"
+        android:textSize="25dp"
+        android:textColor="#262D55"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toTopOf="@+id/textView2" />
+
+    <TextView
+        android:id="@+id/tvTelefono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="56dp"
+        android:text="Telefono"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/tvNombreContacto" />
+
+    <TextView
+        android:id="@+id/tvEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="36dp"
+        android:text="Email"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/tvTelefono" />
+
+    <TextView
+        android:id="@+id/tvNumeroTelefono"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="44dp"
+        android:layout_marginTop="56dp"
+        android:text="982 28 41 87"
+        app:layout_constraintStart_toEndOf="@+id/tvTelefono"
+        app:layout_constraintTop_toBottomOf="@+id/tvNombreContacto" />
+
+    <TextView
+        android:id="@+id/Correo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="36dp"
+        android:text="academiarecatelo@gmail.com"
+        app:layout_constraintStart_toEndOf="@+id/tvEmail"
+        app:layout_constraintTop_toBottomOf="@+id/tvNumeroTelefono" />
+
+    <TextView
+        android:id="@+id/tvTituloHorario"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="164dp"
+        android:layout_marginTop="176dp"
+        android:text="Horario"
+        android:textColor="#262D55"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNombreContacto" />
+
+    <TextView
+        android:id="@+id/tvLugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="172dp"
+        android:layout_marginTop="320dp"
+        android:text="Lugar"
+        android:textColor="#262D55"
+        android:textSize="25dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvNombreContacto" />
+
+    <TextView
+        android:id="@+id/tvHorario"
+        android:layout_width="286dp"
+        android:layout_height="95dp"
+        android:layout_marginStart="64dp"
+        android:layout_marginTop="8dp"
+        android:text="Lunes a Viernes: 8:30-14:00 horas
+y 16:00-20:00 horas.
+
+Sábados: 10:00-13:30 horas."
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloHorario" />
+
+    <TextView
+        android:id="@+id/tvHorario2"
+        android:layout_width="278dp"
+        android:layout_height="103dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="168dp"
+        android:text="Pascual Veiga
+Nº12-14 Bajo
+27002
+Lugo(Capital)"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
+        app:layout_constraintTop_toBottomOf="@+id/tvTituloHorario" />
+
+    <ImageButton
+        android:id="@+id/IbLlamar"
+        android:layout_width="52dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="140dp"
+        android:contentDescription="@string/contacta_con_nosotros"
+        app:layout_constraintStart_toEndOf="@+id/tvNumeroTelefono"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:src="@drawable/ic_baseline_local_phone_24" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
