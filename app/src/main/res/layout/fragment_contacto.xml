@@ -23,7 +23,7 @@
         android:layout_marginStart="76dp"
         android:layout_marginTop="64dp"
         android:text="@string/contacta_con_nosotros"
-        android:textSize="25dp"
+        android:textSize="25sp"
         android:textColor="#262D55"
         app:layout_constraintStart_toStartOf="@+id/textView2"
         app:layout_constraintTop_toTopOf="@+id/textView2" />
@@ -34,7 +34,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
         android:layout_marginTop="56dp"
-        android:text="Telefono"
+        android:text="@string/telefono"
         app:layout_constraintStart_toStartOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/tvNombreContacto" />
 
@@ -44,7 +44,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
         android:layout_marginTop="36dp"
-        android:text="Email"
+        android:text="@string/email"
         app:layout_constraintStart_toStartOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/tvTelefono" />
 
@@ -54,7 +54,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
         android:layout_marginTop="56dp"
-        android:text="982 28 41 87"
+        android:text="@string/_982_28_41_87"
         app:layout_constraintStart_toEndOf="@+id/tvTelefono"
         app:layout_constraintTop_toBottomOf="@+id/tvNombreContacto" />
 
@@ -64,7 +64,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
         android:layout_marginTop="36dp"
-        android:text="academiarecatelo@gmail.com"
+        android:text="@string/academiarecatelo_gmail_com"
         app:layout_constraintStart_toEndOf="@+id/tvEmail"
         app:layout_constraintTop_toBottomOf="@+id/tvNumeroTelefono" />
 
@@ -74,9 +74,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="164dp"
         android:layout_marginTop="176dp"
-        android:text="Horario"
+        android:text="@string/horario"
         android:textColor="#262D55"
-        android:textSize="25dp"
+        android:textSize="25sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvNombreContacto" />
 
@@ -86,9 +86,9 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="172dp"
         android:layout_marginTop="320dp"
-        android:text="Lugar"
+        android:text="@string/lugar"
         android:textColor="#262D55"
-        android:textSize="25dp"
+        android:textSize="25sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tvNombreContacto" />
 
@@ -98,10 +98,7 @@
         android:layout_height="95dp"
         android:layout_marginStart="64dp"
         android:layout_marginTop="8dp"
-        android:text="Lunes a Viernes: 8:30-14:00 horas
-y 16:00-20:00 horas.
-
-Sábados: 10:00-13:30 horas."
+        android:text="@string/lunes_a_viernes_8_30_14_00_horas_y_16_00_20_00_horas_s_bados_10_00_13_30_horas"
         app:layout_constraintStart_toStartOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/tvTituloHorario" />
 
@@ -111,10 +108,7 @@ Sábados: 10:00-13:30 horas."
         android:layout_height="103dp"
         android:layout_marginStart="72dp"
         android:layout_marginTop="168dp"
-        android:text="Pascual Veiga
-Nº12-14 Bajo
-27002
-Lugo(Capital)"
+        android:text="@string/pascual_veiga_n_12_14_bajo_27002_lugo_capital"
         app:layout_constraintStart_toStartOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/tvTituloHorario" />
 
@@ -127,6 +121,7 @@ Lugo(Capital)"
         android:contentDescription="@string/contacta_con_nosotros"
         app:layout_constraintStart_toEndOf="@+id/tvNumeroTelefono"
         app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="DuplicateSpeakableTextCheck"
         tools:src="@drawable/ic_baseline_local_phone_24" />
 
 
