@@ -54,12 +54,14 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="44dp"
         android:layout_marginTop="56dp"
+        android:textColor="#00008B"
         android:text="@string/_982_28_41_87"
         app:layout_constraintStart_toEndOf="@+id/tvTelefono"
         app:layout_constraintTop_toBottomOf="@+id/tvNombreContacto" />
 
     <TextView
-        android:id="@+id/Correo"
+        android:id="@+id/tvCorreo"
+        android:textColor="#00008B"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="64dp"
@@ -111,18 +113,6 @@
         android:text="@string/pascual_veiga_n_12_14_bajo_27002_lugo_capital"
         app:layout_constraintStart_toStartOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/tvTituloHorario" />
-
-    <ImageButton
-        android:id="@+id/IbLlamar"
-        android:layout_width="52dp"
-        android:layout_height="48dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginTop="140dp"
-        android:contentDescription="@string/contacta_con_nosotros"
-        app:layout_constraintStart_toEndOf="@+id/tvNumeroTelefono"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="DuplicateSpeakableTextCheck"
-        tools:src="@drawable/ic_baseline_local_phone_24" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

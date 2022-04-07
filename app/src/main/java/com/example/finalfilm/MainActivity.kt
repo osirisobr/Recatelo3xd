@@ -1,6 +1,8 @@
 package com.example.finalfilm
 
+import android.content.Intent
 import android.content.res.Configuration
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
@@ -61,9 +63,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
             R.id.nav_item_comollegar -> {
                 Toast.makeText(this, "Como llegar", Toast.LENGTH_SHORT).show()
-                val ft: FragmentTransaction = supportFragmentManager.beginTransaction()
-                ft.replace(R.id.fragmentContainerView, ComoLlegarFragment())
-                ft.commit()
+                ponermap()
+
+                //val ft: FragmentTransaction = supportFragmentManager.beginTransaction()
+                //ft.replace(R.id.fragmentContainerView, ComoLlegarFragment())
+                //ft.commit()
 
             }}
        drawer.closeDrawer(GravityCompat.START)
@@ -88,5 +92,15 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         return super.onOptionsItemSelected(item)
     }
+   fun ponermap(){
+       val gmmIntentUri = Uri.parse("geo:43.006924040252656, -7.559487242896649")
+       val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
+       mapIntent.setPackage("com.google.android.apps.maps")
+       startActivity(mapIntent)
+
+
+
+
+   }
 
 }
