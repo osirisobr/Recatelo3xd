@@ -9,14 +9,6 @@
         <entry key="..\:/P_ANDROID/P_RECATELO/NavigationDrawer-master/app/src/main/res/layout/app_bar_main.xml" value="0.37083333333333335" />
         <entry key="..\:/P_ANDROID/P_RECATELO/NavigationDrawer-master/app/src/main/res/layout/nav_header_main.xml" value="0.37083333333333335" />
         <entry key="..\:/P_ANDROID/P_RECATELO/NavigationDrawer-master/app/src/main/res/menu/activity_main_drawer.xml" value="0.37083333333333335" />
-        <entry key="..\:/P_ANDROID/Recatelo3xd/app/src/main/res/layout/activity_main.xml" value="0.2942708333333333" />
-        <entry key="..\:/P_ANDROID/Recatelo3xd/app/src/main/res/layout/app_bar_main.xml" value="0.2375" />
-        <entry key="..\:/P_ANDROID/Recatelo3xd/app/src/main/res/layout/fragment_contacto.xml" value="0.22685185185185186" />
-        <entry key="..\:/P_ANDROID/Recatelo3xd/app/src/main/res/layout/fragment_fotos.xml" value="0.22" />
-        <entry key="..\:/P_ANDROID/Recatelo3xd/app/src/main/res/layout/fragment_rv.xml" value="0.22685185185185186" />
-        <entry key="..\:/P_ANDROID/Recatelo3xd/app/src/main/res/layout/fragment_subir_fotos.xml" value="0.2942708333333333" />
-        <entry key="..\:/P_ANDROID/Recatelo3xd/app/src/main/res/layout/item_foto.xml" value="0.278125" />
-        <entry key="..\:/P_ANDROID/Recatelo3xd/app/src/main/res/menu/activity_main_drawer.xml" value="0.1" />
         <entry key="..\:/P_ANDROID/RecateloClase/app/src/main/res/drawable/ic_baseline_local_phone_24.xml" value="0.104" />
         <entry key="..\:/P_ANDROID/RecateloClase/app/src/main/res/layout/activity_main.xml" value="0.1" />
         <entry key="..\:/P_ANDROID/RecateloClase/app/src/main/res/layout/app_bar_main.xml" value="0.35572916666666665" />
@@ -28,6 +20,14 @@
         <entry key="..\:/P_ANDROID/RecateloClase/app/src/main/res/layout/fragment_novedades.xml" value="0.3416666666666667" />
         <entry key="..\:/P_ANDROID/RecateloClase/app/src/main/res/layout/item_fotos.xml" value="0.3515625" />
         <entry key="..\:/P_ANDROID/RecateloClase/app/src/main/res/menu/activity_main_drawer.xml" value="0.35572916666666665" />
+        <entry key="..\:/Users/ogabriosi/AndroidStudioProjects/Recatelo3/app/src/main/res/layout/activity_main.xml" value="0.19202898550724637" />
+        <entry key="..\:/Users/ogabriosi/AndroidStudioProjects/Recatelo3/app/src/main/res/layout/activity_splash.xml" value="0.328125" />
+        <entry key="..\:/Users/ogabriosi/AndroidStudioProjects/Recatelo3/app/src/main/res/layout/app_bar_main.xml" value="0.328125" />
+        <entry key="..\:/Users/ogabriosi/AndroidStudioProjects/Recatelo3/app/src/main/res/layout/fragment_como_llegar.xml" value="0.328125" />
+        <entry key="..\:/Users/ogabriosi/AndroidStudioProjects/Recatelo3/app/src/main/res/layout/fragment_contacto.xml" value="0.19202898550724637" />
+        <entry key="..\:/Users/ogabriosi/AndroidStudioProjects/Recatelo3/app/src/main/res/layout/fragment_novedades.xml" value="0.25" />
+        <entry key="..\:/Users/ogabriosi/AndroidStudioProjects/Recatelo3/app/src/main/res/layout/fragment_rv.xml" value="0.18342391304347827" />
+        <entry key="..\:/Users/ogabriosi/AndroidStudioProjects/Recatelo3/app/src/main/res/layout/item_novedades.xml" value="0.328125" />
         <entry key="..\:/Users/ogabriosi/Desktop/Recatelo/P_RECATELO-master/app/src/main/res/drawable/splash_background.xml" value="0.22135416666666666" />
         <entry key="..\:/Users/ogabriosi/Desktop/Recatelo/P_RECATELO-master/app/src/main/res/layout/activity_main.xml" value="0.2957427536231884" />
         <entry key="..\:/Users/ogabriosi/Desktop/Recatelo/P_RECATELO-master/app/src/main/res/layout/app_bar_main.xml" value="0.36666666666666664" />
@@ -42,7 +42,7 @@
       </map>
     </option>
   </component>
-  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="1.8" project-jdk-type="JavaSDK">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" project-jdk-name="1.8" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />
   </component>
   <component name="ProjectType">

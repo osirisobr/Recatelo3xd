@@ -1,5 +1,7 @@
 package com.example.finalfilm.Fragments
 
+import android.app.Activity
+import android.content.Context
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -14,30 +16,27 @@ import com.example.finalfilm.RecyclerView.Fotos
 
 class rvFragment : Fragment() {
 
-    val fotos = listOf(Fotos("hola que lo que","fsadfdsfsfsfs"))
-    lateinit var rvFotos : RecyclerView
-
-
+    private val fotos = listOf(Fotos("Hola, Buenas tardes", null),Fotos("Hola, Buenas tardes", null))
+    private lateinit var rvFotos: RecyclerView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+        val view = inflater.inflate(R.layout.fragment_rv, container, false)
 
-        return inflater.inflate(R.layout.fragment_rv, container, false)
-
-        rvFotos = view?.findViewById(R.id.rvFotos)!!
-        val context = this
+        rvFotos = view.findViewById(R.id.rvFotos)
         initRecycler()
 
+        return view
     }
 
 
-    fun initRecycler(){
-        rvFotos.layoutManager = LinearLayoutManager(context)
+    fun initRecycler() {
+        rvFotos.layoutManager = LinearLayoutManager(activity)
         val adapter = FotosAdapter(fotos)
         rvFotos.adapter = adapter
 
 
     }
-    }
+}

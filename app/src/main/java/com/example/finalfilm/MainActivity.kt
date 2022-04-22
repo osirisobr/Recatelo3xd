@@ -72,7 +72,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 if ( administrador == true   ){
                 Toast.makeText(this,"Subir fotos", Toast.LENGTH_SHORT).show()
                    // abrirFragment(FotosFragment())
-                    subirImagenes()
+                    seleccionarImagen()
 
 
 
