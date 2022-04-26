@@ -1,10 +1,15 @@
 package com.example.finalfilm
 
 import android.app.Activity
+import android.content.ContentValues
 import android.content.Intent
 import android.content.res.Configuration
+import android.graphics.Bitmap
 import android.net.Uri
 import android.os.Bundle
+import android.provider.MediaStore
+import android.util.Base64
+import android.util.Log
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
@@ -15,12 +20,13 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.example.finalfilm.Fragments.ContactoFragment
-import com.example.finalfilm.Fragments.FotosFragment
-import com.example.finalfilm.Fragments.NovedadesFragment
+import com.example.finalfilm.Fragments.NombreFotoFragment
 import com.example.finalfilm.Fragments.rvFragment
 import com.google.android.material.navigation.NavigationView
+import com.google.firebase.firestore.ktx.firestore
+import com.google.firebase.ktx.Firebase
+import java.io.ByteArrayOutputStream
 import java.io.IOException
-import java.util.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener  {
 
@@ -28,6 +34,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     private lateinit var toggle: ActionBarDrawerToggle
     private var administrador = true
     lateinit var ImageUri : Uri
+    private lateinit var sTitulo:String
+    private lateinit var sImage:String
+    val db = Firebase.firestore
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -47,8 +56,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         val navigationView: NavigationView = findViewById(R.id.nav_view)
         navigationView.setNavigationItemSelectedListener(this)
-        
 
+        abrirFragment(rvFragment())
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -71,8 +80,9 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_item_fotos ->{
                 if ( administrador == true   ){
                 Toast.makeText(this,"Subir fotos", Toast.LENGTH_SHORT).show()
-                   // abrirFragment(FotosFragment())
+                    abrirFragment(NombreFotoFragment())
                     seleccionarImagen()
+
 
 
 
@@ -129,16 +139,21 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 val uri = data.data
                 // Initialize bitmap
                 try {
-                    // val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, uri)
+                     val bitmap = MediaStore.Images.Media.getBitmap(contentResolver, uri)
                     // initialize byte stream
-                    // val stream = ByteArrayOutputStream()
+                     val stream = ByteArrayOutputStream()
                     // compress Bitmap
-                    // bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream)
+                     bitmap.compress(Bitmap.CompressFormat.JPEG, 100, stream)
                     // Initialize byte array
-                    // val bytes = stream.toByteArray()
+                     val bytes = stream.toByteArray()
                     // get base64 encoded string
-                    // sImage = Base64.encodeToString(bytes, Base64.DEFAULT)
+                     sImage = Base64.encodeToString(bytes, Base64.DEFAULT)
                     // set encoded text on textview
+
+
+
+                    MandarDatos(sImage,sTitulo)
+
                     // tvCodigo!!.text = sImage
                 } catch (e: IOException) {
                     e.printStackTrace()
@@ -172,13 +187,33 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         ft.commit()
 
     }
-    fun subirImagenes()
-    {
-
-        val intent = Intent(Intent.ACTION_GET_CONTENT)
-        intent.type = "*/*"
 
 
+
+
+
+
+
+    private fun MandarDatos( foto : String, titulo : String){
+
+        // Create a new user with a first and last name
+        val user = hashMapOf(
+            "Titulo" to titulo,
+            "Code64" to foto
+        )
+
+        // Add a new document with a generated ID
+        db.collection("users")
+            .add(user)
+            .addOnSuccessListener { documentReference ->
+                Log.d(ContentValues.TAG, "DocumentSnapshot added with ID: ${documentReference.id}")
+                Toast.makeText(this@MainActivity, "Imagen subida", Toast.LENGTH_SHORT).show()
+            }
+            .addOnFailureListener { e ->
+                Log.w(ContentValues.TAG, "Error adding document", e)
+                Toast.makeText(this@MainActivity, "Imagen no subida", Toast.LENGTH_SHORT).show()
+
+            }
 
     }
 

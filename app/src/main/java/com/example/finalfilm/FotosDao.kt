@@ -1,8 +1,8 @@
 package com.example.finalfilm
 
-import com.example.finalfilm.RecyclerView.Fotos
+import com.example.finalfilm.RecyclerView.Foto
 
 interface FotosDao {
 
-    fun getTodos(): List<Fotos>
+    fun getTodos(): List<Foto>
 }
