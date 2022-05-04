@@ -58,6 +58,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         navigationView.setNavigationItemSelectedListener(this)
 
         abrirFragment(rvFragment())
+
+
     }
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
@@ -80,7 +82,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_item_fotos ->{
                 if ( administrador == true   ){
                 Toast.makeText(this,"Subir fotos", Toast.LENGTH_SHORT).show()
-                    abrirFragment(NombreFotoFragment())
+                  //  abrirFragment(NombreFotoFragment())
                     seleccionarImagen()
 
 
@@ -90,7 +92,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
                     Toast.makeText(this, "No puedes subir fotos", Toast.LENGTH_SHORT).show()
                 }
+
+
                         }
+
+
 
 
         }
@@ -149,7 +155,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     // get base64 encoded string
                      sImage = Base64.encodeToString(bytes, Base64.DEFAULT)
                     // set encoded text on textview
-
+                    sTitulo ="Aqui no ha pasado nada"
 
 
                     MandarDatos(sImage,sTitulo)
