@@ -38,9 +38,9 @@ class FotosAdapter(val fotos:List<Foto>):RecyclerView.Adapter<FotosAdapter.Fotos
         fun render(fotos:Foto){
 
             var sImage: String
-            var tvTitulo = view.findViewById<TextView>(R.id.tvTitulo)
+            //var tvTitulo = view.findViewById<TextView>(R.id.tvTitulo)
             var ivFoto = view.findViewById<ImageView>(R.id.ivFotos)
-            tvTitulo.text=fotos.titulo
+           // tvTitulo.text=fotos.titulo
             sImage = fotos.Image
 
 

@@ -20,7 +20,6 @@ import androidx.drawerlayout.widget.DrawerLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentTransaction
 import com.example.finalfilm.Fragments.ContactoFragment
-import com.example.finalfilm.Fragments.NombreFotoFragment
 import com.example.finalfilm.Fragments.rvFragment
 import com.google.android.material.navigation.NavigationView
 import com.google.firebase.firestore.ktx.firestore
@@ -57,6 +56,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         val navigationView: NavigationView = findViewById(R.id.nav_view)
         navigationView.setNavigationItemSelectedListener(this)
 
+
+
+
+
         abrirFragment(rvFragment())
 
 
@@ -82,7 +85,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_item_fotos ->{
                 if ( administrador == true   ){
                 Toast.makeText(this,"Subir fotos", Toast.LENGTH_SHORT).show()
-                  //  abrirFragment(NombreFotoFragment())
+
                     seleccionarImagen()
 
 
@@ -155,10 +158,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                     // get base64 encoded string
                      sImage = Base64.encodeToString(bytes, Base64.DEFAULT)
                     // set encoded text on textview
-                    sTitulo ="Aqui no ha pasado nada"
 
 
-                    MandarDatos(sImage,sTitulo)
+
+                    MandarDatos(sImage)
 
                     // tvCodigo!!.text = sImage
                 } catch (e: IOException) {
@@ -200,11 +203,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
 
 
-    private fun MandarDatos( foto : String, titulo : String){
+    private fun MandarDatos( foto : String){
 
         // Create a new user with a first and last name
+
+
         val user = hashMapOf(
-            "Titulo" to titulo,
+            "Titulo" to "Foto Recatelo",
             "Code64" to foto
         )
 
@@ -220,6 +225,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 Toast.makeText(this@MainActivity, "Imagen no subida", Toast.LENGTH_SHORT).show()
 
             }
+        abrirFragment(rvFragment())
 
     }
 

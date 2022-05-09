@@ -7,21 +7,13 @@
 
     <ImageView
         android:id="@+id/ivFotos"
-        android:layout_width="381dp"
-        android:layout_height="157dp"
-        android:layout_marginStart="5dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="12dp"
         android:layout_marginTop="5dp"
+
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
-    <TextView
-        android:id="@+id/tvTitulo"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="164dp"
-        android:layout_marginTop="8dp"
-        android:hint="PIE DE FOTO"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivFotos" />
 </androidx.constraintlayout.widget.ConstraintLayout>
